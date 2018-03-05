@@ -1,0 +1,75 @@
+* {
+  font-family: GothamPro;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.page-header {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  height: 68px;
+  z-index: 100;
+  align-items:center;
+
+}
+
+.content {
+  height: 68px;
+  z-index: 100;
+
+  min-width: 1202px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  box-sizing: border-box;
+  .navigation-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    box-sizing: border-box;
+    min-width: 44.2%;
+
+    .navigation-point {
+      margin-left: 2.8%;
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .navigation-point:nth-child(1) {
+      margin-left: 18.8%;
+      width: 2.7%;
+    }
+    .navigation-point:nth-child(2) {
+      width: 4.4%;
+    }
+    .navigation-point:nth-child(3) {
+      min-width: 20%;
+      display: flex;
+    }
+    .navigation-point:nth-child(4) {
+      min-width: 13%;
+    }
+    .navigation-point:nth-child(5) {
+      width: 2.3%;
+    }
+    .navigation-point:nth-child(6) {
+      width: 1.7%;
+    }
+  }
+
+  .language-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 17.4%;
+    margin-left: 14.7%;
+  }
+}
