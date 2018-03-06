@@ -1,12 +1,12 @@
 .main-header
   .content
     .navigation-bar
-      .navigation-point Main
-      .navigation-point Investing
-      .navigation-point Why should I mix my coins?
-      .navigation-point How does it work?
-      .navigation-point FAQ
-      .navigation-point Fees
+      .navigation-point(v-bind:class="{active: mainChecked}" v-on:click="switchBlock('main')") Main
+      .navigation-point(v-bind:class="{active: shuffleChecked}"  v-on:click="switchBlock('shuffle')") SHUFFLE
+      .navigation-point(v-bind:class="{active: investingChecked}"  v-on:click="switchBlock('invest')") Investing
+      .navigation-point(v-bind:class="{active: howWorkChecked}"  v-on:click="switchBlock('howWork')") How does it work?
+      .navigation-point(v-bind:class="{active: faqChecked}"  v-on:click="switchBlock('faq')") FAQ
+      .navigation-point(v-bind:class="{active: feesChecked}"  v-on:click="switchBlock('fees')") Fees
   .language-bar
       .language EN
 
