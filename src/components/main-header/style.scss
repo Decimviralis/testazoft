@@ -63,14 +63,14 @@
     }
     .navigation-point:nth-child(3) {
       margin-left: 40px;
-      min-width: 30%;
+      min-width: 195px;
     }
     .navigation-point:nth-child(4) {
-      margin-left: 20px;
-      min-width: 22%;
+      margin-left: 40px;
+      min-width: 130px;
     }
     .navigation-point:nth-child(5) {
-      margin-left: 20px;
+      margin-left: 40px;
       min-width: 2.3%;
     }
     .navigation-point:nth-child(6) {
@@ -79,12 +79,19 @@
     }
   }
 
-  .language-bar {
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    //  margin-right: 17.4%;
-    margin-right: 0;
-    cursor: pointer;
+
+}
+.language-bar {
+
+  //  margin-right: 17.4%;
+  margin-right: 0;
+  cursor: pointer;
+  .language {
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
   }
 }
