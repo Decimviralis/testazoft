@@ -1,0 +1,199 @@
+
+* {
+  font-family: GothamPro;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .upper-block {
+    margin-top: 50px;
+
+    .upper-description-title {
+      font-weight: bold;
+      font-size: 24px;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.96;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+    }
+    .upper-description-details {
+      min-width: 712px;
+      margin-top: 20px;
+      font-weight: 300;
+      font-size: 24px;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.96;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+    }
+  }
+
+  .lower-block {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 100%;
+    //background: url("../../assets/images/right-bg.png") 100% 100% no-repeat;
+    //background-size: contain;
+    margin-top: 75px;
+    .security {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.79;
+      letter-spacing: normal;
+      color: #ffffff;
+      margin-bottom: 31px;
+
+    }
+
+    .description {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      min-width: 13.9%;
+      .title {
+        margin-right: 49px;
+        .upper-title {
+          font-size: 24px;
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          text-align: left;
+          color: #ffffff;
+        }
+
+        .lower-title {
+          font-size: 24px;
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1;
+          letter-spacing: normal;
+          text-align: left;
+          color: #ffffff;
+        }
+      }
+
+      .title:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+
+    .stats-title {
+      margin: 0 auto;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.79;
+      letter-spacing: normal;
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .stats-details {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 0 auto;
+      margin-bottom: 87px;
+      .btc {
+        margin-right: 136px;
+        text-align: center;
+
+        .value {
+          font-size: 24px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.79;
+          letter-spacing: normal;
+          text-align: right;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+        .total {
+          font-size: 18px;
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.06;
+          letter-spacing: normal;
+          text-align: left;
+        }
+      }
+
+      .ltc {
+        margin-right: 136px;
+        text-align: center;
+        .value {
+          font-size: 24px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.79;
+          letter-spacing: normal;
+          text-align: right;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+        .total {
+          font-size: 18px;
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.06;
+          letter-spacing: normal;
+          text-align: left;
+        }
+      }
+
+      .eth {
+        text-align: center;
+        .value {
+          font-size: 24px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.79;
+          letter-spacing: normal;
+          text-align: right;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+        .total {
+          font-size: 18px;
+          font-weight: 300;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.06;
+          letter-spacing: normal;
+          text-align: left;
+        }
+      }
+
+
+    }
+  }
+}
+
