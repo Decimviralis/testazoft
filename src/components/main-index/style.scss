@@ -1,0 +1,84 @@
+@import '../../styles/fonts-rule';
+@import '../../styles/colors';
+.index {
+  color: #ffffff;
+  font-family: $font;
+  width: 100%;
+
+  &__wrapper {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &-main {
+
+    &__name {
+      font-size: 100px;
+      font-weight: 300;
+      letter-spacing: -3.5px;
+      margin: 0 0 20px 0;
+
+      strong {
+        font-weight: bold;
+
+        &:first-child {
+          letter-spacing: -5px;
+        }
+      }
+    }
+
+    &__buttons {
+      margin: 0 0 37px 0;
+
+      button {
+        font-size: 18px;
+        border: 0;
+        margin: 0 20px 0 0;
+        cursor: pointer;
+        background: none;
+        color: #ffffff;
+        padding: 12px 58px;
+      }
+
+      .active {
+        text-transform: uppercase;
+        background: $f-button;
+        border-radius: 30px;
+      }
+    }
+
+    &__descr {
+      max-width: 540px;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.17;
+      letter-spacing: normal;
+      text-align: right;
+      margin: 0 0 63px auto;
+    }
+  }
+  &-block {
+    background-color: $green;
+    box-shadow: 0 0 40px 0 rgba(80, 80, 80, 0.5);
+    padding: 40px 0 60px;
+
+    &__title {
+      font-size: 36px;
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+      margin: 0 0 0 80px;
+      text-transform: uppercase;
+      font-weight: 300;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  }
+}

@@ -20,3 +20,26 @@ body {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
   }
 }
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../styles/fonts/GothamPro.woff2') format('woff2'),
+      url('../styles/fonts/GothamPro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../styles/fonts/GothamPro-Light.woff2') format('woff2'),
+      url('../styles/fonts/GothamPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../styles/fonts/GothamPro-Bold.woff2') format('woff2'),
+      url('../styles/fonts/GothamPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font: GothamPro;
