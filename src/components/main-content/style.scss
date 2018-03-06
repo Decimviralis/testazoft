@@ -1,3 +1,22 @@
-.main-content{
-	
+@import '../../styles/fonts-rule';
+@import '../../styles/colors';
+.content {
+  background: #ffffff;
+  display: flex;
+
+  &-left {
+
+    &__text {
+      p.content {
+        font-size: 14px;
+        line-height: 1.29;
+        margin: 0 0 10px 0;
+        color: $text;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
