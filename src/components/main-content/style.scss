@@ -1,13 +1,14 @@
 @import '../../styles/fonts-rule';
 @import '../../styles/colors';
-.content {
+.about {
   background: #ffffff;
   display: flex;
+  position: relative;
 
   &-left {
 
     &__text {
-      p.content {
+      p.about {
         font-size: 14px;
         line-height: 1.29;
         margin: 0 0 10px 0;
@@ -20,6 +21,34 @@
     }
   }
   &-right {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: -21.2%;
     background: $f-dark;
   }
+}
+.advantages {
+  width: 100%;
+  background: #ffffff;
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  &__item {
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 0.94;
+      color: $f-dark;
+    }
+    .descr {
+      font-size: 14px;
+      line-height: 1.29;
+      color: $text;
+    }
+  }
+
 }
