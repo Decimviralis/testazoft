@@ -1,3 +1,4 @@
+
 * {
   font-family: GothamPro;
   font-size: 14px;
@@ -7,27 +8,26 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: left;
-  color: #000000;
+  color: #fff;
 }
 
-.page-header {
-  width: 100%;
-  box-sizing: border-box;
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
   height: 68px;
-  z-index: 100;
   align-items:center;
-
+  max-width: 100%;
 }
 
 .content {
   height: 68px;
   z-index: 100;
-
-  min-width: 1202px;
+  min-width: 70%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items:center;
   box-sizing: border-box;
   .navigation-bar {
@@ -39,37 +39,52 @@
     min-width: 44.2%;
 
     .navigation-point {
-      margin-left: 2.8%;
+      margin: 0 auto;
       display: flex;
       flex-flow: row nowrap;
+      cursor: pointer;
+      &.active {
+        font-weight: bold;
+        height: 68px;
+        opacity: 0.4;
+        background-color: #ffffff;
+        color: black;
+        align-items: center;
+      }
     }
 
     .navigation-point:nth-child(1) {
-      margin-left: 18.8%;
-      width: 2.7%;
+      margin-left: 20px;
+      min-width: 2.7%;
     }
     .navigation-point:nth-child(2) {
-      width: 4.4%;
+      margin-left: 40px;
+      min-width: 4.4%;
     }
     .navigation-point:nth-child(3) {
-      min-width: 20%;
-      display: flex;
+      margin-left: 40px;
+      min-width: 30%;
     }
     .navigation-point:nth-child(4) {
-      min-width: 13%;
+      margin-left: 20px;
+      min-width: 22%;
     }
     .navigation-point:nth-child(5) {
-      width: 2.3%;
+      margin-left: 20px;
+      min-width: 2.3%;
     }
     .navigation-point:nth-child(6) {
-      width: 1.7%;
+      margin-left: 40px;
+      min-width: 1.7%;
     }
   }
 
   .language-bar {
+    position: absolute;
     display: flex;
     justify-content: flex-end;
-    margin-right: 17.4%;
-    margin-left: 14.7%;
+    //  margin-right: 17.4%;
+    margin-right: 0;
+    cursor: pointer;
   }
 }
