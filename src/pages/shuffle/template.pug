@@ -1,0 +1,101 @@
+.shuffle-page
+  mainHeader
+  .content
+    .make-order
+      .upper-string Make
+      .lower-string A mixing order <span> </span>
+    .options-window
+      .options-content
+        .code
+          .title Your personal code
+          .input-large-string
+            input(value="12345678901234567890123456789012")
+        .address
+          .send-bar
+            .title Send to address
+              .input-large-string
+                input(value="1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC")
+          .amount
+            .title Amount
+              .amount-input
+                input(value="1.0000")
+        .new-address(v-for="row in sendRows", v-if="showFlag")
+          .delete-button
+          .send-bar
+              .input-large-string
+                input(value = "1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC")
+          .amount
+              .amount-input
+                input(value="1.0000")
+        .address-empty
+          .add-button(v-on:click="addRow")
+            img(src="../../assets/images/add-button.svg")
+          .send-bar
+              .input-large-string
+                input
+          .amount
+              .amount-input
+                input
+          .green-container
+            .container-title ORDER REQUIRED INPUT PAYMENTS
+            .green-content
+              .hash
+                .title Hash
+                .value 2596a10f090541ecf4c22572226e637638dd171f80dc06b5c4b7f97205346fab2754a6583937dee8c3d479744e3f164a0edbc7416cc50d7e2797c3d6d8613964
+              .order-created
+                .title Order created
+                .value
+                  .date 01.01.2018
+                  .time 12:30:45
+              .order-input
+                .title Input order expires
+                .value
+                  .date 01.01.2018
+                  .time 12:30:45
+              .input-address
+                .title Input address
+                .address-value 1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC
+              .receive-amount
+                .title Amount to receive (includes free)
+                .amount-value 1.02780000 BTC
+        .lower-bar
+          .scrollbars
+            .quantity
+              .title Quantity transactions for payout
+              .scroll
+                span
+                  .circle
+                    .value 2
+            .delay
+              .delay-options
+                .check-box
+                  img(src="../../assets/images/checked.svg")
+                .title Delay
+                .question
+                  img(src="../../assets/images/question.svg")
+              .scroll
+                span
+                  .circle
+                    .value 17:03
+            .randomize
+              .randomize-options
+                .check-box
+                .title Randomize periodicity between
+              .scroll
+                span
+                  .circle-left
+                    .value 8
+                  .circle-right
+                    .value 30
+            .code-captcha
+              .user-values
+                .title Code
+                  .input-code
+                    input(value="W6 8HP")
+              .captcha-body
+                img(src="../../assets/images/captcha@3x.png")
+            .submit-button Submit
+
+
+
+

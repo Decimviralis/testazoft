@@ -31,6 +31,7 @@ export default {
           this.howWorkChecked = false;
           this.faqChecked = false;
           this.feesChecked =  false;
+          this.$router.push({name: 'main'});
           break;
         case 'shuffle':
           this.mainChecked = false;
@@ -39,6 +40,7 @@ export default {
           this.howWorkChecked = false;
           this.faqChecked = false;
           this.feesChecked =  false;
+          this.$router.push({name: 'shuffle'});
           break;
         case 'invest':
           this.mainChecked = false;

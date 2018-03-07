@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import mainPage from '../pages/main-page/main-page'
+import shufflePage from '../pages/shuffle/shuffle'
 //Чтобы подключить страницу (не забудь прописать страницу в routes)
 //@import pageName from  'path to pageName'
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/',
       name: 'main',
       component: mainPage,
+    },
+    {
+      path: '/shuffle',
+      name: 'shuffle',
+      component: shufflePage
     }
   ],
    mode: 'history'
