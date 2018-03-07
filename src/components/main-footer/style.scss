@@ -1,207 +1,100 @@
-
-* {
-  font-family: GothamPro;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #fff;
-}
-
+$url: '../../assets/images/';
+@import '../../styles/fonts-rule';
+@import '../../styles/colors';
 .main-footer {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  bottom: 0;
+  margin-top: -220px;
   position: relative;
-  .upper-block {
-    margin-top: 50px;
-
-    .upper-description-title {
-      font-weight: bold;
-      font-size: 24px;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 0.96;
-      letter-spacing: normal;
-      text-align: left;
-      color: #ffffff;
-    }
-    .upper-description-details {
-      min-width: 712px;
-      margin-top: 20px;
-      font-weight: 300;
-      font-size: 24px;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 0.96;
-      letter-spacing: normal;
-      text-align: left;
-      color: #ffffff;
-    }
+  display: flex;
+  align-items: flex-end;
+  background: url($url + 'footer-fon.svg') 0 100%,
+  url($url + 'footer-back.svg') 0% 50%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  color: #ffffff;
+  padding: 150px 0 0 0;
+}
+.content-wrap {
+  box-sizing: border-box;
+  
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: $font;
+  padding: 0 0 87px 0;
+  //padding: 150px 0 0 0;
+}
+.upper-block {
+  max-width: 712px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 0.96;
+  margin: 0 0 74px 0;
+  &__title {
+    font-weight: bold;
+    margin: 0 0 15px 0;
   }
-
-  .lower-block {
+}
+.lower-block {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 0 50px 0;
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 0.79;
+    text-align: right;
+    margin: 0 0 31px 0;
+  }
+  &__list {
+    width: 100%;
     display: flex;
-    flex-flow: column nowrap;
-    max-width: 100%;
-    //background: url("../../assets/images/right-bg.png") 100% 100% no-repeat;
-    //background-size: contain;
-    margin-top: 75px;
-
-    .security {
-      display: flex;
-      justify-content: flex-end;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 237px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+  }
+}
+.stats-block {
+  display: flex;
+  flex-flow: column nowrap;
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 0.79;
+    text-align: center;
+    margin: 0 0 38px 0;
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  &__item {
+    text-align: center;
+    img {
+      width: 147px;
+      height: 147px;
+      margin: 0 0 20px 0;
+    }
+    .value {
       font-size: 24px;
       font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
       line-height: 0.79;
-      letter-spacing: normal;
-      color: #ffffff;
-      margin-bottom: 31px;
-
-    }
-
-    .description {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      margin-bottom: 50px;
-      min-width: 67.2%;
-     // max-width: 13.9%;
-      .title {
-        margin-right: 49px;
-        min-width: 203px;
-        .upper-title {
-          font-size: 24px;
-          font-weight: 300;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1;
-          letter-spacing: normal;
-          text-align: left;
-          color: #ffffff;
-        }
-
-        .lower-title {
-          font-size: 24px;
-          font-weight: 300;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1;
-          letter-spacing: normal;
-          text-align: left;
-          color: #ffffff;
-        }
-      }
-
-      .title:nth-child(3) {
-        min-width: 153px;
-
-      }
-      .title:nth-child(4) {
-        margin-right: -1%;
-        min-width: 237px;
-
-      }
-    }
-
-    .stats-title {
-      margin: 0 auto;
-      font-size: 24px;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 0.79;
-      letter-spacing: normal;
       text-align: center;
-      margin-bottom: 38px;
+      margin: 0 0 10px 0;
     }
-
-    .stats-details {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      margin-bottom: 87px;
-      min-width: 59.7%;
-      .btc {
-        margin-right: 136px;
-        text-align: center;
-
-        .value {
-          font-size: 24px;
-          font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 0.79;
-          letter-spacing: normal;
-          text-align: right;
-          margin-top: 20px;
-          margin-bottom: 10px;
-        }
-        .total {
-          font-size: 18px;
-          font-weight: 300;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.06;
-          letter-spacing: normal;
-          text-align: left;
-        }
-      }
-
-      .ltc {
-        margin-right: 136px;
-        text-align: center;
-        .value {
-          font-size: 24px;
-          font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 0.79;
-          letter-spacing: normal;
-          text-align: right;
-          margin-top: 20px;
-          margin-bottom: 10px;
-        }
-        .total {
-          font-size: 18px;
-          font-weight: 300;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.06;
-          letter-spacing: normal;
-          text-align: left;
-        }
-      }
-
-      .eth {
-        text-align: center;
-        .value {
-          font-size: 24px;
-          font-weight: bold;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 0.79;
-          letter-spacing: normal;
-          text-align: right;
-          margin-top: 20px;
-          margin-bottom: 10px;
-        }
-        .total {
-          font-size: 18px;
-          font-weight: 300;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.06;
-          letter-spacing: normal;
-          text-align: left;
-        }
-      }
-
-
+    .total {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.06;
     }
   }
 }

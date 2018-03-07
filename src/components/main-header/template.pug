@@ -1,12 +1,11 @@
 .main-header
-  .content
-    .navigation-bar
-      .navigation-point(v-bind:class="{active: mainChecked}" v-on:click="switchBlock('main')") Main
-      .navigation-point(v-bind:class="{active: shuffleChecked}"  v-on:click="switchBlock('shuffle')") SHUFFLE
-      .navigation-point(v-bind:class="{active: investingChecked}"  v-on:click="switchBlock('invest')") Investing
-      .navigation-point(v-bind:class="{active: howWorkChecked}"  v-on:click="switchBlock('howWork')") How does it work?
-      .navigation-point(v-bind:class="{active: faqChecked}"  v-on:click="switchBlock('faq')") FAQ
-      .navigation-point(v-bind:class="{active: feesChecked}"  v-on:click="switchBlock('fees')") Fees
-  .language-bar
-      .language EN
+  .menu
+    .menu__item.active(v-bind:class="{active: mainChecked}" v-on:click="switchBlock('main')") Main
+    .menu__item(v-bind:class="{active: shuffleChecked}"  v-on:click="switchBlock('shuffle')") SHUFFLE
+    .menu__item(v-bind:class="{active: investingChecked}"  v-on:click="switchBlock('invest')") Investing
+    .menu__item(v-bind:class="{active: howWorkChecked}"  v-on:click="switchBlock('howWork')") How does it work?
+    .menu__item(v-bind:class="{active: faqChecked}"  v-on:click="switchBlock('faq')") FAQ
+    .menu__item(v-bind:class="{active: feesChecked}"  v-on:click="switchBlock('fees')") Fees
+  .lang-menu
+    .lang-menu__item EN
 

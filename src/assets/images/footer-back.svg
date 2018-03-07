@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="893px" viewBox="0 0 1440 893" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>E5125D95-CFC2-4CBD-AF27-7DB6B8D654D7</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="-29.467863%" y1="0%" x2="120.611478%" y2="96.3708306%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C86DD7" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="0 1513 1440 1702.90508 1440 3658 0 3658"></polygon>
+        <filter x="-3.5%" y="-3.7%" width="109.7%" height="106.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="20" dy="-10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-copy" transform="translate(0.000000, -1465.000000)">
+            <g id="Triangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -2,25 +2,15 @@ $url: '../../assets/images/';
 .main-page {
   width: 100%;
   position: relative;
-  background: url($url + 'back-fon.svg') 0% 0% no-repeat;
-  z-index:1;
-  &:before {
-    content: url($url + 'small-fon.svg');
-    position:absolute;
-    z-index:-1;
-    top: 286px;
-    left: 0;
-  }
+  background: url($url + 'main-fon.svg') 100% 0,
+  url($url + 'small-fon.svg') 0 286px,
+  url($url + 'back-fon.svg') 0 0;
+  background-repeat: no-repeat;
 }
 .main-wrapper {
+  position: relative;
+}
+.content-wrapper {
   width: 70%;
   margin: 0 auto;
-  z-index: 100;
-  &:after {
-    content: url($url + 'main-fon.svg');
-    position:absolute;
-    z-index:-1;
-    top: 0;
-    right: 0;
-  }
 }
