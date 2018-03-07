@@ -1,0 +1,54 @@
+$url: '../../assets/images/';
+* {
+  font-family: GothamPro;
+}
+.info-page {
+  min-width: 1202px;
+  background: linear-gradient(to top right, #3023ae, #c86dd7);
+//  url($url + 'small-fon.svg') 0 110px,
+ // url($url + 'back-fon.svg') 0 0;
+  width: 70%;
+  margin: 0 auto;
+
+  .content {
+    max-width: 70%;
+    height: 1100px;
+    margin: 0 auto;
+    color: #ffffff;
+
+    .page-title {
+      font-size: 36px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+      text-align: left;
+      color: #ffffff;
+      margin: 0 auto;
+      margin-left: 80px;
+      margin-top: 60px;
+      .upper-title {
+        font-weight: 300;
+      }
+      .lower-title {
+
+      }
+    }
+
+    .page-body {
+      margin: 0 auto;
+      width: 940px;
+      height: 540px;
+      margin-top: 93px;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.29;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+    }
+  }
+}

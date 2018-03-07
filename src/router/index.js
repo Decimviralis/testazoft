@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import mainPage from '../pages/main-page/main-page'
 import shufflePage from '../pages/shuffle/shuffle'
+import infoPage from '../pages/info-page/info-page'
+import investPage from '../pages/invest/invest'
+import faqPage from '../pages/faq/faq'
 //Чтобы подключить страницу (не забудь прописать страницу в routes)
 //@import pageName from  'path to pageName'
 
@@ -16,11 +19,27 @@ export default new Router({
       path: '/',
       name: 'main',
       component: mainPage,
+
     },
     {
       path: '/shuffle',
       name: 'shuffle',
       component: shufflePage
+    },
+    {
+      path: '/how-it-works',
+      name: 'info',
+      component: infoPage
+    },
+    {
+      path: '/faq',
+      name: 'faq-page',
+      component: faqPage
+    },
+    {
+      path: '/invest',
+      name: 'invest-page',
+      component: investPage
     }
   ],
    mode: 'history'

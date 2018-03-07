@@ -7,10 +7,11 @@
 }
 .menu {
   max-width: 708px;
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin: 0 auto;
   &__item {
     padding: 36px 20px;
     align-items: center;
@@ -29,4 +30,46 @@
   font-weight: bold;
   background: rgba(255,255,255, 0.4);
   box-sizing: border-box;
+}
+
+.shuffle-page {
+  .menu__item:nth-child(2) {
+    font-weight: bold;
+    background: rgba(255,255,255, 0.4);
+    box-sizing: border-box;
+  }
+}
+
+.invest-page {
+
+    .menu__item:nth-child(3) {
+      font-weight: bold;
+      background: rgba(255,255,255, 0.4);
+      box-sizing: border-box;
+    }
+
+}
+
+.info-page {
+  .menu__item:nth-child(4) {
+    font-weight: bold;
+    background: rgba(255,255,255, 0.4);
+    box-sizing: border-box;
+  }
+}
+
+.faq-page {
+  .menu__item:nth-child(5) {
+    font-weight: bold;
+    background: rgba(255,255,255, 0.4);
+    box-sizing: border-box;
+  }
+}
+
+.main-page {
+  .menu__item:nth-child(1) {
+    font-weight: bold;
+    background: rgba(255,255,255, 0.4);
+    box-sizing: border-box;
+  }
 }

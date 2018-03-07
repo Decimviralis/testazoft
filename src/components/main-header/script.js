@@ -49,6 +49,7 @@ export default {
           this.howWorkChecked = false;
           this.faqChecked = false;
           this.feesChecked =  false;
+          this.$router.push({name: 'invest-page'});
           break;
         case 'howWork':
           this.mainChecked = false;
@@ -57,6 +58,7 @@ export default {
           this.howWorkChecked = true;
           this.faqChecked = false;
           this.feesChecked =  false;
+          this.$router.push({name: 'info'});
           break;
         case 'faq':
           this.mainChecked = false;
@@ -65,6 +67,7 @@ export default {
           this.howWorkChecked = false;
           this.faqChecked = true;
           this.feesChecked =  false;
+          this.$router.push({name: 'faq-page'});
           break;
         case 'fees':
           this.mainChecked = false;
@@ -73,6 +76,7 @@ export default {
           this.howWorkChecked = false;
           this.faqChecked = false;
           this.feesChecked =  true;
+
           break;
       }
     }
