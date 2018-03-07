@@ -1,11 +1,12 @@
 $url: '../../assets/images/';
 .main-page {
-  width: 100%;
+  width: 100vh;
   position: relative;
   background: url($url + 'main-fon.svg') 100% 0,
   url($url + 'small-fon.svg') 0 286px,
   url($url + 'back-fon.svg') 0 0;
   background-repeat: no-repeat;
+  background-size: cover, contain, contain;
 }
 .main-wrapper {
   position: relative;

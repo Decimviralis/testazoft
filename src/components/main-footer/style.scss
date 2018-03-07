@@ -10,6 +10,7 @@ $url: '../../assets/images/';
   align-items: flex-end;
   background: url($url + 'footer-fon.svg') 0 100%,
   url($url + 'footer-back.svg') 0% 50%;
+  background-size: contain, contain;
   background-repeat: no-repeat;
   box-sizing: border-box;
   color: #ffffff;

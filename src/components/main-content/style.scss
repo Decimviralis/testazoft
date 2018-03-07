@@ -24,22 +24,34 @@
     }
   }
 
-  &__img {
+  &__list {
     max-width: 780px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    //justify-content: space-between;
+    //align-items: center;
+    margin: 0 0 20px 0;
+  }
+  &__item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    .img {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      img {
+        margin: 0 10px;
+      }
+    }
+  }
+  &__name {
+    max-width: 700px;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
-    margin: 0 0 20px 0;
-  }
-
-  &__name {
-    max-width: 780px;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
