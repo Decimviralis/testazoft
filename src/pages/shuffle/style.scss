@@ -70,14 +70,13 @@ $url: '../../assets/images/';
 .shuffle-page {
   min-width: 1202px;
   background: #8038ee;
-
+  width: 70%;
+  margin: 0 auto;
   .content {
-
-    width: 70%;
+    max-width: 70%;
+    height: 1100px;
     margin: 0 auto;
-    min-height: 1000px;
     color: #ffffff;
-
     .make-order {
       font-size: 36px;
       font-weight: bold;
@@ -88,6 +87,7 @@ $url: '../../assets/images/';
       text-align: left;
       color: #ffffff;
       text-transform: uppercase;
+      margin-top: 50px;
       .upper-string {
         font-weight: 300;
       }
@@ -131,7 +131,12 @@ $url: '../../assets/images/';
           margin-bottom: 10px;
           display: flex;
           flex-flow: row nowrap;
-          margin-left: 80px;
+          margin-left: 50px;
+          .check-box {
+            margin-top: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+          }
           .input-large-string {
             width: 460px;
             input {
@@ -271,7 +276,52 @@ $url: '../../assets/images/';
         .lower-bar {
           .scrollbars {
             .title {
-              margin-bottom: 21px;
+            }
+            .scroll-new {
+
+              input {
+                width: 300px;
+                -webkit-appearance: none;
+                outline: none;
+                cursor: pointer;
+                border-color: transparent;
+                color: transparent;
+                height: 8px;
+                border-radius: 4px;
+                background-color: rgba(35,0,92, 0.2);
+                margin-bottom: 21px;
+              }
+              input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                padding: 8px 9px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #ffffff;
+                cursor: pointer;; /* Add cool effects to your sliders! */
+              }
+
+              /* All the same stuff for Firefox */
+              input[type=range]::-moz-range-thumb {
+                box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                border: 1px solid #000000;
+                height: 36px;
+                width: 16px;
+                border-radius: 3px;
+                background: #ffffff;
+                cursor: pointer;
+              }
+
+              /* All the same stuff for IE */
+              input[type=range]::-ms-thumb {
+                box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                border: 1px solid #000000;
+                height: 36px;
+                width: 16px;
+                border-radius: 3px;
+                background: #ffffff;
+                cursor: pointer;
+              }
             }
             .scroll {
               position: relative;
@@ -306,21 +356,96 @@ $url: '../../assets/images/';
             }
             .quantity {
               margin-left: 80px;
+              .values {
+                display: flex;
+                flex-flow: row nowrap;
+                .scroll-value {
+                  margin-left: 20px;
+                  font-weight: bold;
+                }
+              }
             }
             .delay {
+              &.unactive {
+                opacity: 0.5;
+              }
               .delay-options {
                 margin-left: 50px;
                 display: flex;
                 flex-flow: row nowrap;
+
                 .check-box {
                   cursor: pointer;
                 }
                 .question {
+
                   margin-left: 10px;
                   cursor: pointer;
                 }
                 .title {
+                  &.unactive {
+                    opacity: 0.5;
+                  }
                   margin-left: 10px;
+                }
+
+                .values {
+                  display: flex;
+                  flex-flow: row nowrap;
+                  .scroll-value {
+                    margin-left: 20px;
+                    font-weight: bold;
+                  }
+                }
+              }
+              .scroll-new {
+                &.unactive {
+                  opacity: 0.5;
+                }
+                margin-left: 80px;
+                input {
+                  margin-top: 15px;
+                  width: 300px;
+                  -webkit-appearance: none;
+                  outline: none;
+                  cursor: pointer;
+                  border-color: transparent;
+                  color: transparent;
+                  height: 8px;
+                  border-radius: 4px;
+                  background-color: rgba(35,0,92, 0.2);
+                  margin-bottom: 21px;
+                }
+                input[type=range]::-webkit-slider-thumb {
+                  -webkit-appearance: none;
+                  padding: 8px 9px;
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 50%;
+                  background-color: #ffffff;
+                  cursor: pointer;; /* Add cool effects to your sliders! */
+                }
+
+                /* All the same stuff for Firefox */
+                input[type=range]::-moz-range-thumb {
+                  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                  border: 1px solid #000000;
+                  height: 36px;
+                  width: 16px;
+                  border-radius: 3px;
+                  background: #ffffff;
+                  cursor: pointer;
+                }
+
+                /* All the same stuff for IE */
+                input[type=range]::-ms-thumb {
+                  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                  border: 1px solid #000000;
+                  height: 36px;
+                  width: 16px;
+                  border-radius: 3px;
+                  background: #ffffff;
+                  cursor: pointer;
                 }
               }
               .scroll {
@@ -335,16 +460,19 @@ $url: '../../assets/images/';
                     border-radius: 30px;
                   }
                 }
+
               }
             }
 
             .randomize {
+              opacity: 0.5;
               .randomize-options {
                 display: flex;
                 flex-flow: row nowrap;
                 margin-left: 50px;
                 .title {
                   margin-left: 10px;
+                  margin-bottom: 21px;
                 }
               }
               .scroll {
