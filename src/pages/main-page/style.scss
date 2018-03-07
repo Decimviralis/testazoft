@@ -3,34 +3,24 @@ $url: '../../assets/images/';
   width: 100%;
   position: relative;
   background: url($url + 'back-fon.svg') 0% 0% no-repeat;
-  z-index: 0;
-  overflow: auto;
-
-  .main-wrapper {
-    width: 70%;
-    margin: 0 auto;
-    z-index: 10;  
+  z-index:1;
+  &:before {
+    content: url($url + 'small-fon.svg');
+    position:absolute;
+    z-index:-1;
+    top: 286px;
+    left: 0;
   }
 }
-.main-fon {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  img {
-    height: 100%;
-    width: 100%;
-  }
-}
-.small-fon {
-  width: 100%;
-  position: absolute;
-  top: 286px;
-  left: 0;
-  z-index: 1;
-  img {
-    height: 100%;
-    width: 100%;
+.main-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  z-index: 100;
+  &:after {
+    content: url($url + 'main-fon.svg');
+    position:absolute;
+    z-index:-1;
+    top: 0;
+    right: 0;
   }
 }
