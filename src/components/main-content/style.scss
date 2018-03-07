@@ -3,6 +3,7 @@
 .about {
   background: #ffffff;
   display: flex;
+  flex-flow: row nowrap;
   position: relative;
 
   &-left {
@@ -25,10 +26,7 @@
     }
   }
   &-right {
-    width: 40%;
-    height: 100%;
-    position: absolute;
-    right: -21.2%;
+
     background: $f-dark;
   }
 }
