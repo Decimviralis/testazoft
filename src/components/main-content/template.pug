@@ -41,8 +41,8 @@
       .about-right 
         .right-wrap
           img(src="../../assets/images/about.svg", alt="")
-          button.active I got it, let me participate
-          button I want to read manual first
+          button(v-bind:class="{ active: activePart }", v-on:click="changeIndex") I got it, let me participate
+          button(v-bind:class="{ active: activeRead }", v-on:click="changeIndex") I want to read manual first
     .advantages
       .advantages__list
         .advantages__item

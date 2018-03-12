@@ -2,6 +2,6 @@
   .index-main
     .index-main__name <strong>BIT</strong>Shuffle<strong>.io</strong>
     .index-main__buttons
-      button.active SHUFFLE
-      button Learn more
+      button(v-bind:class="{ active: activeShuffle }", v-on:click="changeIndex") SHUFFLE
+      button(v-bind:class="{ active: activeMore }", v-on:click="changeIndex") Learn more
     .index-main__descr The way bitcoin transactions work causes them to be chained together in a permanent public record
