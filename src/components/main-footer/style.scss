@@ -7,6 +7,12 @@ $url: '../../assets/images/';
   bottom: 0;
   box-sizing: border-box;
   color: #ffffff;
+  /*@media (max-width: 1370px) {
+    margin: -220px 0 0 0;
+    .footer-wrapper {
+      background-position: 0 100%, 0 40%;
+    }
+  }*/
 }
 .footer-wrapper {
   width: 100%;
@@ -24,6 +30,21 @@ $url: '../../assets/images/';
   }
   @media (min-width: 1800px) {
     background-position: 0 100px, 0 10%;
+  }
+  @media (max-width: 1370px) {
+    background-size: 110%;
+  }
+  @media (max-width: 1330px) {
+    background-size: 120%;
+  }
+  @media (max-width: 1250px) {
+    background-size: 130%;
+  }
+  @media (max-width: 1150px) {
+    background-size: 140%;
+  }
+  @media (max-width: 1050px) {
+    background-size: 155%;
   }
 }
 .content-wrap {
