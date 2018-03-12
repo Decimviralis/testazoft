@@ -1,5 +1,5 @@
 export default {
-  name: 'range-rover',
+  name: 'quantity-range-rover',
 
   props: {
     minimum: {
@@ -8,7 +8,7 @@ export default {
     },
     maximum: {
       type: [Number, String],
-      default: 60,
+      default: 10,
     },
     first: [Number, String],
     second: [Number, String],
@@ -26,7 +26,7 @@ export default {
       padding: 4,
       centerX1: 50,
       centerY1: 20,
-      centerX2: 255,
+      centerX2: 500,
       centerY2: 20,
       startAngle: 0,
       endAngle: 2 * Math.PI,
@@ -40,7 +40,7 @@ export default {
 
 
       min: 0,
-      max: 60,
+      max: 10,
 
       low: this.min,
       high: this.max,
@@ -193,9 +193,9 @@ export default {
   //    this.context.fillText(this.low, this.centerX1, this.centerY1);
       this.context.fill();
 
-      this.context.beginPath();
-      this.context.arc(this.centerX2, this.centerY2, this.radius, this.startAngle, this.endAngle);
-      this.context.fill();
+      // this.context.beginPath();
+      // this.context.arc(this.centerX2, this.centerY2, this.radius, this.startAngle, this.endAngle);
+      // this.context.fill();
 
       this.context.beginPath();
       this.context.fillStyle = "#9153c7";
@@ -209,11 +209,11 @@ export default {
       }
       this.context.fill();
 
-      this.context.beginPath();
-      this.context.fillStyle = "#9153c7";
-      this.context.font = "18px GothamPro bold";
-      this.context.fillText(this.high, this.centerX2-10, this.centerY2+5);
-      this.context.fill();
+      // this.context.beginPath();
+      // this.context.fillStyle = "#9153c7";
+      // this.context.font = "18px GothamPro bold";
+      // this.context.fillText(this.high, this.centerX2-10, this.centerY2+5);
+      // this.context.fill();
     },
 
     setConfig: function () {
@@ -280,8 +280,8 @@ export default {
   },
 
   created() {
-    this.low = 8;
-    this.high = 32;
+    this.low = 2;
+    this.high = 11.5;
   }
 
 };

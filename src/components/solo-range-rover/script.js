@@ -1,5 +1,6 @@
+
 export default {
-  name: 'range-rover',
+  name: 'solo-range-rover',
 
   props: {
     minimum: {
@@ -8,7 +9,7 @@ export default {
     },
     maximum: {
       type: [Number, String],
-      default: 60,
+      default: 105000,
     },
     first: [Number, String],
     second: [Number, String],
@@ -26,11 +27,11 @@ export default {
       padding: 4,
       centerX1: 50,
       centerY1: 20,
-      centerX2: 255,
+      centerX2: 500,
       centerY2: 20,
       startAngle: 0,
       endAngle: 2 * Math.PI,
-      radius: 16,
+      radius: 35,
       rate: '',
       startValue: 0,
 
@@ -40,7 +41,7 @@ export default {
 
 
       min: 0,
-      max: 60,
+      max: 105000,
 
       low: this.min,
       high: this.max,
@@ -189,31 +190,29 @@ export default {
       this.context.stroke();
 
       this.context.beginPath();
-      this.context.arc(this.centerX1, this.centerY1, this.radius, this.startAngle, this.endAngle);
-  //    this.context.fillText(this.low, this.centerX1, this.centerY1);
+      this.context.ellipse(this.centerX1+30, this.centerY1, this.radius, 24, this.startAngle, this.endAngle, 0);
+      //    this.context.fillText(this.low, this.centerX1, this.centerY1);
       this.context.fill();
 
-      this.context.beginPath();
-      this.context.arc(this.centerX2, this.centerY2, this.radius, this.startAngle, this.endAngle);
-      this.context.fill();
+      // this.context.beginPath();
+      // this.context.arc(this.centerX2, this.centerY2, this.radius, this.startAngle, this.endAngle);
+      // this.context.fill();
 
       this.context.beginPath();
       this.context.fillStyle = "#9153c7";
       this.context.font = "18px GothamPro bold";
-      if(this.low < 10) {
-        this.context.fillText(this.low, this.centerX1-5, this.centerY1+5);
-      } else if(this.low >= 10) {
-        this.context.fillText(this.low, this.centerX1-10, this.centerY1+5);
-      } else if(this.min == -0) {
+
+        this.context.fillText(this.getFomattedTime(this.low), this.centerX1+12, this.centerY1+5);
+         if(this.min == -0) {
         this.low = 0;
       }
       this.context.fill();
 
-      this.context.beginPath();
-      this.context.fillStyle = "#9153c7";
-      this.context.font = "18px GothamPro bold";
-      this.context.fillText(this.high, this.centerX2-10, this.centerY2+5);
-      this.context.fill();
+      // this.context.beginPath();
+      // this.context.fillStyle = "#9153c7";
+      // this.context.font = "18px GothamPro bold";
+      // this.context.fillText(this.high, this.centerX2-10, this.centerY2+5);
+      // this.context.fill();
     },
 
     setConfig: function () {
@@ -243,17 +242,18 @@ export default {
       this.preDraw();
     },
 
-    blurring: function (who) {
-      if (who === "low") {
-        if (this.low > this.high) {
-          this.low = this.high;
-        }
-      } else {
-        if (this.high < this.low) {
-          this.high = this.low;
-        }
-      }
+    getFomattedTime(time) {
+      let timestamp = time;
+      let date = new Date();
+      date.setTime(timestamp*1000);
+      let hours = date.getHours();
+      let validMinutes = function () {
+        return(date.getMinutes() < 10) ? "0" + date.getMinutes() :date.getMinutes();
+      };
+      let formatted = "" + hours + ":" + validMinutes();
+      return formatted;
     },
+
   },
 
   mounted: function () {
@@ -280,8 +280,8 @@ export default {
   },
 
   created() {
-    this.low = 8;
-    this.high = 32;
+    this.low = 36200;
+    this.high = 135000;
   }
 
 };

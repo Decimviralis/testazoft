@@ -73,7 +73,7 @@ $url: '../../assets/images/';
   min-width: 1202px;
   height: 1000px;
   background:
-    url($url + 'shuffle-left-angle.svg') 0 100%,
+    url($url + 'new-triangle.svg') 0 100%,
     url($url + 'shuffle-right-angle.svg') 100% 100%,
     linear-gradient(226deg, #3023ae, #c86dd7);
   box-shadow: 20px -10px 40px 0 rgba(0,
@@ -179,7 +179,7 @@ $url: '../../assets/images/';
             background-color: #7ed321;
             box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
             top: 200%;
-            left: 44%;
+            left: 47%;
             .container-title {
               text-align: center;
               font-family: GothamPro;
@@ -286,17 +286,21 @@ $url: '../../assets/images/';
             .title {
             }
 
-
-
             .quantity {
-              margin-left: 80px;
+              .title {
+                margin-left: 80px;
+              }
               .values {
                 display: flex;
                 flex-flow: row nowrap;
                 .scroll-value {
-                  margin-left: 20px;
+
                   font-weight: bold;
                 }
+              }
+
+              .scroll-new {
+                margin-left: 0;
               }
             }
             .delay {
@@ -327,74 +331,12 @@ $url: '../../assets/images/';
                   display: flex;
                   flex-flow: row nowrap;
                   .scroll-value {
-                    margin-left: 20px;
+
                     font-weight: bold;
                   }
                 }
               }
-              .scroll-new {
-                &.unactive {
-                  opacity: 0.5;
-                }
-                margin-left: 80px;
-                input {
-                  margin-top: 15px;
-                  width: 300px;
-                  -webkit-appearance: none;
-                  outline: none;
-                  cursor: pointer;
-                  border-color: transparent;
-                  color: transparent;
-                  height: 8px;
-                  border-radius: 4px;
-                  background-color: rgba(35,0,92, 0.2);
-                  margin-bottom: 21px;
-                }
-                input[type=range]::-webkit-slider-thumb {
-                  -webkit-appearance: none;
-                  padding: 8px 9px;
-                  width: 30px;
-                  height: 30px;
-                  border-radius: 50%;
-                  background-color: #ffffff;
-                  cursor: pointer; /* Add cool effects to your sliders! */
-                }
 
-                /* All the same stuff for Firefox */
-                input[type=range]::-moz-range-thumb {
-                  padding: 8px 9px;
-                  width: 30px;
-                  height: 30px;
-                  border-radius: 50%;
-                  background-color: #ffffff;
-                  cursor: pointer;
-                }
-
-                /* All the same stuff for IE */
-                input[type=range]::-ms-thumb {
-                  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-                  border: 1px solid #000000;
-                  height: 36px;
-                  width: 16px;
-                  border-radius: 3px;
-                  background: #ffffff;
-                  cursor: pointer;
-                }
-              }
-              .scroll {
-                margin-left: 80px;
-                span {
-                  left: 21.7%;
-                  .circle {
-                    cursor: move;
-                    width: 48px;
-                    -webkit-border-radius: 30px;
-                    -moz-border-radius: 30px;
-                    border-radius: 30px;
-                  }
-                }
-
-              }
             }
 
             .randomize {

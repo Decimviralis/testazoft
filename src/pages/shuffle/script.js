@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import mainHeader from '../../components/main-header/main-header'
 import rangeRover from '../../components/range-rover/range-rover'
+import soloRangeRover from '../../components/solo-range-rover/solo-range-rover'
+import quantityRover from '../../components/quantity-range-rover/quantity-range-rover'
 
 export default {
   name: 'shuffle',
   components: {
     mainHeader,
-    rangeRover
+    rangeRover,
+    soloRangeRover,
+    quantityRover
   },
   data : function () {
     return {
@@ -40,17 +44,7 @@ export default {
         this.time = 0;
       }
       console.log("tyt");
-    },
-    getFomattedTime(time) {
-      let timestamp = time;
-      let date = new Date();
-      date.setTime(timestamp*1000);
-      let hours = date.getHours();
-      let validMinutes = function () {
-        return(date.getMinutes() < 10) ? "0" + date.getMinutes() :date.getMinutes();
-      };
-      let formatted = "" + hours + ":" + validMinutes();
-      return formatted;
-    },
+    }
+
   }
 }

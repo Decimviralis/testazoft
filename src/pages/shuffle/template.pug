@@ -64,18 +64,18 @@
             .quantity
               .values
                 .title Quantity transactions for payout
-                .scroll-value {{quantity}}
               .scroll-new
+                quantityRover
             .delay(v-bind:class= "{'unactive': !active}")
               .delay-options
                 .check-box(v-on:click="setActive")
                   img(src="../../assets/images/checked.svg")(v-if="active")
                 .values
                   .title Delay
-                  .scroll-value {{getFomattedTime(time)}}
                 .question
                   img(src="../../assets/images/question.svg")
               .scroll-new
+                soloRangeRover
             .randomize
               .randomize-options
                 .check-box
