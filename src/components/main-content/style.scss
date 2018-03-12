@@ -8,14 +8,21 @@
   flex-flow: column nowrap;
   align-items: center;
   background-color: $green;
-  padding: 40px 0 60px;
+  padding: 40px 0 60px 0;
   color: #ffffff;
 
+  &__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 80px;
+  }
   &__title {
     font-size: 36px;
     line-height: 1.08;
     letter-spacing: -1.8px;
-    //margin: 0 auto 40px 80px;
+    margin: 0 auto 40px 0;
     text-transform: uppercase;
     font-weight: 300;
 
@@ -25,7 +32,7 @@
   }
 
   &__list {
-    //max-width: 780px;
+    max-width: 780px;
     display: flex;
     flex-flow: row nowrap;
     //justify-content: space-between;
@@ -43,6 +50,13 @@
       flex-flow: column nowrap;
       align-items: center;
       justify-content: center;
+      &:first-child {
+        .img:first-child {
+          img:first-child {
+            margin: 0;
+          }
+        }
+      }
     
     .img {
       display: flex;
@@ -51,11 +65,7 @@
       margin: 0 0 20px 0;
       
       img {
-        margin: 0 10px;
-      }
-      .first-line {
-        background: red;
-        margin: 50px 0;
+        margin: 0 0 0 10px;
       }
     }
     .name {
@@ -86,6 +96,7 @@
 
   &-left {
     padding: 78px 0;
+    width:70%;
 
     &__text {
       margin: 0 80px;
@@ -103,11 +114,26 @@
       }
     }
   }
+
+  
   &-right {
-    width: 60%;
-    background: $f-dark;
+    position: relative;
+    width: 26%;
+    //background: $f-dark;
     padding: 40px 0;
     color: #ffffff;
+    z-index: 1;
+    &:before {
+      content:"";
+      z-index: -1;
+      position:absolute;
+      display: block;
+      width: 200%;
+      height: 100%;
+      background: $f-dark;
+      top:0;
+      left: 0;
+    }
     .right-wrap {
       display: flex;
       flex-flow: column nowrap;
@@ -119,6 +145,7 @@
       margin: 0 0 40px 0;
     }
     button {
+      white-space: nowrap;
       border-radius: 20px;
       border: solid 1px #7ed321;
       padding: 15px 22px;

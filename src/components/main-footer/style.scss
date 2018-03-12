@@ -8,14 +8,17 @@ $url: '../../assets/images/';
   position: relative;
   display: flex;
   align-items: flex-end;
-  background: url($url + 'footer-fon.svg') 0 -156%,
+  background: url($url + 'footer-fon.svg') 0 100%,
   url($url + 'footer-back.svg') 0% 0%;
-  //background-size: cover, cover;
   background-size: 100%;
   background-repeat: no-repeat;
   box-sizing: border-box;
   color: #ffffff;
   padding: 150px 0 0 0;
+  /*@media (min-width: 1500px) {
+    background: url($url + 'footer-fon.svg') 0 120%,
+    url($url + 'footer-back.svg') 0% 0%;
+  }*/
 }
 .content-wrap {
   box-sizing: border-box;
