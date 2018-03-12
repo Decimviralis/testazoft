@@ -5,7 +5,6 @@
   font-family: $font;
   width: 100%;
   z-index: 80;
-  //height: 100vh;
 
   &-main {
     width: 100%;
@@ -38,6 +37,10 @@
         background: none;
         color: #ffffff;
         padding: 12px 58px;
+        /*&:hover {
+          background: $f-button;
+          border-radius: 30px;
+        }*/
       }
 
       .active {
