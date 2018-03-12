@@ -11,13 +11,6 @@
   padding: 40px 0 60px 0;
   color: #ffffff;
 
-  &__wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 0 80px;
-  }
   &__title {
     font-size: 36px;
     line-height: 1.08;
@@ -25,6 +18,9 @@
     margin: 0 auto 40px 0;
     text-transform: uppercase;
     font-weight: 300;
+    .title-wrap {
+      margin: 0 0 0 80px;
+    }
 
     strong {
       font-weight: bold;
