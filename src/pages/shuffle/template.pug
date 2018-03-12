@@ -74,13 +74,14 @@
                   .title Delay
                 .question
                   img(src="../../assets/images/question.svg")
-              .scroll-new
+              .scroll-new(v-if="active")
                 soloRangeRover
-            .randomize
+            .randomize(v-bind:class= "{'unactive': !randomizeActive}")
               .randomize-options
-                .check-box
+                .check-box(v-on:click="setRandomizeActive")
+                  img(src="../../assets/images/checked.svg")(v-if="randomizeActive")
                 .title Randomize periodicity between
-              .scroll-new
+              .scroll-new(v-if="randomizeActive")
                   rangeRover
             .code-captcha
               .user-values

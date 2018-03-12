@@ -306,6 +306,7 @@ $url: '../../assets/images/';
             .delay {
               &.unactive {
                 opacity: 0.5;
+                margin-bottom: 10px;
               }
               .delay-options {
                 margin-left: 50px;
@@ -340,6 +341,10 @@ $url: '../../assets/images/';
             }
 
             .randomize {
+              &.unactive {
+                opacity: 0.5;
+                margin-bottom: 10px;
+              }
               .randomize-options {
                 display: flex;
                 flex-flow: row nowrap;

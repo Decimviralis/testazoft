@@ -21,7 +21,8 @@ export default {
       quantity: '2',
       time: 36200,
       active: true,
-      notAllStrings: true
+      notAllStrings: true,
+      randomizeActive: true
     }
   },
   methods: {
@@ -43,7 +44,10 @@ export default {
       if(this.active === false) {
         this.time = 0;
       }
-      console.log("tyt");
+    },
+    setRandomizeActive() {
+      this.randomizeActive = !this.randomizeActive;
+
     }
 
   }
