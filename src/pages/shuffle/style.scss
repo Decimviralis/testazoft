@@ -65,19 +65,23 @@ $url: '../../assets/images/';
       width: 150px;
     }
   }
+
+
 }
 
 .shuffle-page {
   min-width: 1202px;
-  background: url($url + 'main-fon.svg') 100% 0,
-  url($url + 'small-fon.svg') 0 286px,
-  url($url + 'back-fon.svg') 0 0;
+  height: 1000px;
+  background:
+    url($url + 'shuffle-left-angle.svg') 0 100%,
+    url($url + 'shuffle-right-angle.svg') 100% 100%,
+    linear-gradient(226deg, #3023ae, #c86dd7);
+  box-shadow: 20px -10px 40px 0 rgba(0,
+    0, 0, 0.5);
   background-repeat: no-repeat;
-  width: 70%;
   margin: 0 auto;
   .content {
-    max-width: 70%;
-    height: 1106px;
+    max-width: 940px;
     margin: 0 auto;
     color: #ffffff;
     .make-order {
@@ -106,11 +110,11 @@ $url: '../../assets/images/';
       background-color: #9153c7;
       box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.5);
       position: relative;
+      margin-bottom: 208px;
       .options-content {
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
-
 
         .code {
           margin-top: 20px;
@@ -169,6 +173,7 @@ $url: '../../assets/images/';
           margin-left: 50px;
           margin-bottom: 20px;
           .green-container {
+            user-select: none;
             position: absolute;
             width: 540px;
             background-color: #7ed321;
@@ -280,83 +285,9 @@ $url: '../../assets/images/';
           .scrollbars {
             .title {
             }
-            .scroll-new {
 
-              input {
-                width: 300px;
-                -webkit-appearance: none;
-                outline: none;
-                cursor: pointer;
-                border-color: transparent;
-                color: transparent;
-                height: 8px;
-                border-radius: 4px;
-                background-color: rgba(35,0,92, 0.2);
-                margin-bottom: 21px;
-              }
-              input[type=range]::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                padding: 8px 9px;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background-color: #ffffff;
-                cursor: pointer; /* Add cool effects to your sliders! */
-              }
 
-              /* All the same stuff for Firefox */
-              input[type=range]::-moz-range-thumb {
-                padding: 8px 9px;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background-color: #ffffff;
-                cursor: pointer;
 
-              }
-
-              /* All the same stuff for IE */
-              input[type=range]::-ms-thumb {
-                box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-                border: 1px solid #000000;
-                height: 36px;
-                width: 16px;
-                border-radius: 3px;
-                background: #ffffff;
-                cursor: pointer;
-              }
-            }
-            .scroll {
-              position: relative;
-              width: 300px;
-              height: 8px;
-              border-radius: 4px;
-              background-color: rgba(35,0,92, 0.2);
-              margin-bottom: 21px;
-              span {
-                position: absolute;
-                left: 7.9%;
-                bottom: -14px;
-                .circle {
-                  padding: 8px 9px;
-                  width: 15px;
-                  border-radius: 50%;
-                  background-color: #ffffff;
-                  cursor: pointer;
-                  .value {
-                    user-select: none;
-                    font-size: 18px;
-                    font-weight: bold;
-                    font-style: normal;
-                    font-stretch: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
-                    text-align: center;
-                    color: #9153c7;
-                  }
-                }
-              }
-            }
             .quantity {
               margin-left: 80px;
               .values {
@@ -467,7 +398,6 @@ $url: '../../assets/images/';
             }
 
             .randomize {
-              opacity: 0.5;
               .randomize-options {
                 display: flex;
                 flex-flow: row nowrap;
@@ -480,51 +410,6 @@ $url: '../../assets/images/';
               .scroll {
                 margin-left: 80px;
                 position: relative;
-                span {
-
-                  position: absolute;
-                  display: flex;
-                  flex-flow: row nowrap;
-                  justify-content: center;
-                  .circle-left {
-                    padding: 8px 9px;
-                    width: 15px;
-                    border-radius: 50%;
-                    background-color: #ffffff;
-                    cursor: move;
-                    .value {
-                      user-select: none;
-                      text-align: center;
-                      color: #9153c7;
-                      font-size: 18px;
-                      font-weight: bold;
-                      font-style: normal;
-                      font-stretch: normal;
-                      line-height: normal;
-                      letter-spacing: normal;
-                    }
-                  }
-                  .circle-right {
-                    margin-left: 88px;
-                    padding: 8px 3px;
-                    width: 30px;
-                    border-radius: 50%;
-                    background-color: #ffffff;
-                    cursor: pointer;
-
-                    .value {
-                      user-select: none;
-                      text-align: center;
-                      color: #9153c7;
-                      font-size: 18px;
-                      font-weight: bold;
-                      font-style: normal;
-                      font-stretch: normal;
-                      line-height: normal;
-                      letter-spacing: normal;
-                    }
-                  }
-                }
               }
             }
             .code-captcha {

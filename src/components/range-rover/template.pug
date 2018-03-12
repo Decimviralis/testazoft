@@ -1,0 +1,12 @@
+.range-rower-container(ref="canvasContainer")
+  canvas.range-canvas(
+  id="rangeId"
+  ref="rangeCanvas"
+  width="340px"
+  height="40px"
+  v-on:mousedown="mouseDownHandler"
+  v-on:mouseup="mouseUpHandler"
+  v-on:mouseleave="mouseLeaveHandler"
+  v-on:mousemove="mouseMoveHandler"
+  )
+

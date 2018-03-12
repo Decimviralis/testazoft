@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import mainHeader from '../../components/main-header/main-header'
+import rangeRover from '../../components/range-rover/range-rover'
 
 export default {
   name: 'shuffle',
   components: {
-    mainHeader
+    mainHeader,
+    rangeRover
   },
   data : function () {
     return {
@@ -14,16 +16,23 @@ export default {
       showFlag: false,
       quantity: '2',
       time: 36200,
-      active: true
+      active: true,
+      notAllStrings: true
     }
   },
   methods: {
     addRow() {
       this.showFlag = true;
-      this.sendRows.push(1);
+      if(this.sendRows.length < 2) {
+        this.sendRows.push(1);
+      } else {
+        this.notAllStrings = false;
+        return;
+      }
     },
     deleteRow() {
       this.sendRows.pop();
+      this.notAllStrings = true;
     },
     setActive() {
       this.active = !this.active;
@@ -43,6 +52,5 @@ export default {
       let formatted = "" + hours + ":" + validMinutes();
       return formatted;
     },
-
   }
 }

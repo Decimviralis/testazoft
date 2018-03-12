@@ -4,23 +4,22 @@ $url: '../../assets/images/';
 }
 .faq-page {
   min-width: 1202px;
-  background: linear-gradient(to top right, #3023ae, #c86dd7);
-//  url($url + 'small-fon.svg') 0 110px,
- // url($url + 'back-fon.svg') 0 0;
+  background: url($url + 'info-left-angle.svg') 0 100% no-repeat,
+  url($url + 'info-right-angle.svg') 100% 100% no-repeat,
+  linear-gradient(124deg, #3023ae, #c86dd7);
   width: 70%;
   margin: 0 auto;
 
   .content {
-    max-width: 70%;
-    height: 1100px;
+    max-width: 940px;
+    height: 1000px;
     margin: 0 auto;
     color: #ffffff;
 
     .body {
       margin: 0 auto;
-      margin-top: 60px;
-      width: 940px;
-      height: 522px;
+      margin-top: 40px;
+      max-width: 100%;
 
       font-family: GothamPro;
       font-size: 14px;
@@ -36,7 +35,9 @@ $url: '../../assets/images/';
         margin-bottom: 20px;
         margin-top: 20px;
       }
-
+      .first {
+        margin-top: 0;
+      }
     }
 
   }
