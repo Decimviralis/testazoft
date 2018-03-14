@@ -136,7 +136,7 @@ export default {
       this.isFirstDrag = false;
       this.isSecondDrag = false;
     },
-    mouseMoveHandler: function () {
+    mouseMoveHandler: function (event) {
       if (this.isDrag) {
 
         let boundingRect = this.canvas.getBoundingClientRect();

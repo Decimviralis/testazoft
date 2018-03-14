@@ -137,7 +137,7 @@ export default {
       this.isFirstDrag = false;
       this.isSecondDrag = false;
     },
-    mouseMoveHandler: function () {
+    mouseMoveHandler: function (event) {
       if (this.isDrag) {
 
         let boundingRect = this.canvas.getBoundingClientRect();
@@ -204,8 +204,10 @@ export default {
 
         this.context.fillText(this.getFomattedTime(this.low), this.centerX1+12, this.centerY1+5);
          if(this.min == -0) {
-        this.low = 0;
-      }
+        return this.low = 0;
+      } else if(this.low > 25140) {
+           return this.low = 25140;
+        }
       this.context.fill();
 
       // this.context.beginPath();
