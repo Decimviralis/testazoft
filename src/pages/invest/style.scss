@@ -8,8 +8,10 @@ $url: '../../assets/images/';
     url($url + 'info-left-angle.svg') 0 100% no-repeat,
     url($url + 'info-right-angle.svg') 100% 100% no-repeat,
     linear-gradient(124deg, #3023ae, #c86dd7);
-  width: 70%;
+
   margin: 0 auto;
+  width: 100vh;
+  height: 100vh;
   .content {
     max-width: 940px;
     height: 1000px;

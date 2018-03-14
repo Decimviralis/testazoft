@@ -190,7 +190,7 @@ export default {
       this.context.stroke();
 
       this.context.beginPath();
-      this.context.ellipse(this.centerX1+30, this.centerY1, this.radius, 24, this.startAngle, this.endAngle, 0);
+      this.context.ellipse(this.centerX1+30, this.centerY1, this.radius, 23.5, this.startAngle, this.endAngle, 0);
       //    this.context.fillText(this.low, this.centerX1, this.centerY1);
       this.context.fill();
 
@@ -200,9 +200,9 @@ export default {
 
       this.context.beginPath();
       this.context.fillStyle = "#9153c7";
-      this.context.font = "18px GothamPro bold";
+      this.context.font = "bold 18px GothamPro";
 
-        this.context.fillText(this.getFomattedTime(this.low), this.centerX1+12, this.centerY1+5);
+        this.context.fillText(this.getFomattedTime(this.low), this.centerX1+7, this.centerY1+5);
          if(this.min == -0) {
         return this.low = 0;
       } else if(this.low > 25140) {
@@ -283,7 +283,7 @@ export default {
 
   created() {
     this.low = 36200;
-    this.high = 135000;
+    this.high = 122990;
   }
 
 };

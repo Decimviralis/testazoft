@@ -3,20 +3,19 @@ $url: '../../assets/images/';
   font-family: GothamPro;
 }
 .info-page {
-  min-width: 1202px;
+  width: 100vh;
+  height: 100vh;
   background:
-  url($url + 'how-work-right-angle.svg') 100% 0 no-repeat,
-  url($url + 'how-work-left-angle.svg') 0 50% no-repeat,
+  url($url + 'how-work-right-angle.svg') 100% 10% no-repeat,
+  url($url + 'how-work-left-angle.svg') 0 70% no-repeat,
   linear-gradient(124deg, #3023ae, #c86dd7);
-  width: 70%;
+ // width: 70%;
   margin: 0 auto;
   background-size: cover;
   .content {
     max-width: 940px;
-    min-height: 1000px;
     margin: 0 auto;
     color: #ffffff;
-
     .page-title {
       font-size: 36px;
       font-weight: bold;
@@ -27,13 +26,15 @@ $url: '../../assets/images/';
       text-align: left;
       color: #ffffff;
       margin: 0 auto;
-      margin-left: 80px;
-      margin-top: 7.1%;
+
       .upper-title {
+        margin-top: 4.7%;
         font-weight: 300;
+        margin-left: 5.6%;
       }
       .lower-title {
-
+        margin-left: 5.6%;
+        margin-bottom: 15.3%;
       }
     }
 
@@ -41,7 +42,7 @@ $url: '../../assets/images/';
       margin: 0 auto;
       width: 940px;
       height: 540px;
-      margin-top: 15.3%;
+      margin-bottom: 12.1%;
       font-size: 14px;
       font-weight: normal;
       font-style: normal;

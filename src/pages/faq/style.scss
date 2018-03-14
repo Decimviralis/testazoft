@@ -7,19 +7,20 @@ $url: '../../assets/images/';
   background: url($url + 'info-left-angle.svg') 0 100% no-repeat,
   url($url + 'info-right-angle.svg') 100% 100% no-repeat,
   linear-gradient(124deg, #3023ae, #c86dd7);
-  width: 70%;
+  width: 100vh;
+  height: 100vh;
   margin: 0 auto;
 
   .content {
     max-width: 940px;
-    height: 1000px;
+
     margin: 0 auto;
     color: #ffffff;
-
     .body {
+      max-height: 522px;
       margin: 0 auto;
       margin-top: 40px;
-      max-width: 100%;
+
 
       font-family: GothamPro;
       font-size: 14px;

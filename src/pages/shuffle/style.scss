@@ -70,8 +70,8 @@ $url: '../../assets/images/';
 }
 
 .shuffle-page {
-  min-width: 1202px;
-  height: 1000px;
+  width: 100vh;
+  height: 100vh;
   background:
     url($url + 'new-triangle.svg') 0 100%,
     url($url + 'shuffle-right-angle.svg') 100% 100%,
