@@ -29,7 +29,7 @@
               .amount-input
                 input(value="1.0000")
         .address-empty
-          .add-button(v-on:click="addRow")(v-if="notAllStrings")
+          .add-button(v-on:click="addRow" v-if="notAllStrings")
             img(src="../../assets/images/add-button.svg")
           .send-bar(v-if="notAllStrings")
               .input-large-string
@@ -69,7 +69,7 @@
             .delay(v-bind:class= "{'unactive': !active}")
               .delay-options
                 .check-box(v-on:click="setActive")
-                  img(src="../../assets/images/checked.svg")(v-if="active")
+                  img(src="../../assets/images/checked.svg" v-if="active")
                 .values
                   .title Delay
                 .question
