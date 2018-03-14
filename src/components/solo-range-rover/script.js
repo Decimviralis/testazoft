@@ -202,7 +202,7 @@ export default {
       this.context.fillStyle = "#9153c7";
       this.context.font = "bold 18px GothamPro";
 
-        this.context.fillText(this.getFomattedTime(this.low), this.centerX1+7, this.centerY1+5);
+        this.context.fillText(this.getFomattedTime(this.low), this.centerX1+8.4, this.centerY1+5);
          if(this.min == -0) {
         return this.low = 0;
       } else if(this.low > 25140) {

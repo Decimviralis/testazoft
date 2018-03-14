@@ -201,7 +201,7 @@ export default {
       this.context.fillStyle = "#9153c7";
       this.context.font = "bold 18px GothamPro";
       if(this.low < 10) {
-        this.context.fillText(this.low, this.centerX1-5, this.centerY1+5);
+        this.context.fillText(this.low, this.centerX1-6.3, this.centerY1+5);
       } else if(this.low >= 10) {
         this.context.fillText(this.low, this.centerX1-10, this.centerY1+5);
       } else if(this.min == -0) {
@@ -212,7 +212,7 @@ export default {
       this.context.beginPath();
       this.context.fillStyle = "#9153c7";
       this.context.font = "bold 18px GothamPro";
-      this.context.fillText(this.high, this.centerX2-10, this.centerY2+5);
+      this.context.fillText(this.high, this.centerX2-11.5, this.centerY2+5);
       this.context.fill();
     },
 

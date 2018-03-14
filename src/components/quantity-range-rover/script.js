@@ -201,7 +201,7 @@ export default {
       this.context.fillStyle = "#9153c7";
       this.context.font = "bold 18px GothamPro";
       if(this.low < 10) {
-        this.context.fillText(this.low, this.centerX1-5, this.centerY1+5);
+        this.context.fillText(this.low, this.centerX1-6, this.centerY1+5);
       } else if(this.low >= 10) {
         this.context.fillText(this.low, this.centerX1-10, this.centerY1+5);
       } else if(this.min == -0) {
