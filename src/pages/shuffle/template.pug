@@ -79,7 +79,7 @@
             .randomize(v-bind:class= "{'unactive': !randomizeActive}")
               .randomize-options
                 .check-box(v-on:click="setRandomizeActive")
-                  img(src="../../assets/images/checked.svg")(v-if="randomizeActive")
+                  img(src="../../assets/images/checked.svg" v-if="randomizeActive")
                 .title Randomize periodicity between
               .scroll-new(v-if="randomizeActive")
                   rangeRover
