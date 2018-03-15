@@ -70,7 +70,7 @@ $url: '../../assets/images/';
 }
 
 .shuffle-page {
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   background:
     url($url + 'new-triangle.svg') 0 100%,
@@ -79,6 +79,7 @@ $url: '../../assets/images/';
   box-shadow: 20px -10px 40px 0 rgba(0,
     0, 0, 0.5);
   background-repeat: no-repeat;
+
   margin: 0 auto;
   .content {
     max-width: 940px;
@@ -95,6 +96,7 @@ $url: '../../assets/images/';
       color: #ffffff;
       text-transform: uppercase;
       margin-top: 50px;
+      margin-left: 5.6%;
       .upper-string {
         font-weight: 300;
       }

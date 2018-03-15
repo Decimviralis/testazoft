@@ -173,6 +173,9 @@ export default {
       }
     },
     preDraw: function () {
+
+
+      this.context.fill();
       this.context.lineWidth = 8;
       this.context.lineCap = "round";
       this.context.strokeStyle = "#7B42B1";
@@ -180,19 +183,24 @@ export default {
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
       this.context.beginPath();
       this.context.moveTo(this.startValue, this.centerY2);
-      this.context.lineTo(this.canvas.width - this.startValue, this.centerY2);
+      this.context.lineTo(this.canvas.width-20, this.centerY2);
       this.context.stroke();
 
       this.context.beginPath();
       this.context.moveTo(this.centerX1, this.centerY2);
       this.context.lineTo(this.centerX2, this.centerY2);
 
-      this.context.stroke();
-
+      this.context.fillStyle = "#9153c7";
+      //this.context.fillStyle = "#ffffff";
       this.context.beginPath();
-      this.context.ellipse(this.centerX1+30, this.centerY1, this.radius, 23.5, this.startAngle, this.endAngle, 0);
-      //    this.context.fillText(this.low, this.centerX1, this.centerY1);
-      this.context.fill();
+      this.context.strokeStyle = "#fff";
+      this.context.lineJoin = "round";
+      this.context.lineWidth = 33;
+
+      this.context.strokeRect(this.centerX1+(33/2), this.centerY1, 68-33, 0);
+      // this.context.fillRect(this.centerX1+(33/2), this.centerY1+(33/2), 68-33, 10);
+      // this.context.ellipse(this.centerX1+30, this.centerY1, this.radius, 23.5, this.startAngle, this.endAngle, 0);
+      //      this.context.fillText(this.low, this.centerX1, this.centerY1);
 
       // this.context.beginPath();
       // this.context.arc(this.centerX2, this.centerY2, this.radius, this.startAngle, this.endAngle);
@@ -202,7 +210,7 @@ export default {
       this.context.fillStyle = "#9153c7";
       this.context.font = "bold 18px GothamPro";
 
-        this.context.fillText(this.getFomattedTime(this.low), this.centerX1+8.4, this.centerY1+5);
+        this.context.fillText(this.getFomattedTime(this.low), this.centerX1+10.3, this.centerY1+5);
          if(this.min == -0) {
         return this.low = 0;
       } else if(this.low > 25140) {
@@ -262,8 +270,8 @@ export default {
     this.canvas = this.$refs.rangeCanvas;
     this.context = this.canvas.getContext("2d");
     this.startValue = this.radius + this.padding;
-    this.setConfig();
 
+    this.setConfig();
     if (this.minimum || this.minimum === 0) {
       this.min = this.minimum;
     }
@@ -278,12 +286,14 @@ export default {
     }
     this.$emit('changeFirst', this.low);
     this.$emit('changeSecond', this.high);
+    this.context.font = "bold 24px GothamPro";
     this.preDraw();
   },
 
   created() {
     this.low = 36200;
     this.high = 122990;
+
   }
 
 };

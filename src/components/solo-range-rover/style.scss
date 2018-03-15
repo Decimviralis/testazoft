@@ -5,9 +5,10 @@
   color: black;
 }
 
-canvas {
+canvas, canvas.range-canvas {
   margin-bottom: 5px;
   margin-left: 40px;
+  font-family: GothamPro;
 }
 
 .max-value {
