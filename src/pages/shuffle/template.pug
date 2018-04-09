@@ -5,44 +5,86 @@
       .upper-string Make
       .lower-string A mixing order <span> </span>
     .options-window
-      .options-content
-        .code
-          .title Your personal code
-          .input-large-string
-            input(value="12345678901234567890123456789012")
-        .address
-          .send-bar
-            .title Send to address
-              .input-large-string
-                input(value="1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC")
-          .amount
-            .title Amount
-              .amount-input
-                input(value="1.0000")
-        .new-address(v-for="row in sendRows", v-if="showFlag")
-          .check-box(v-on:click="deleteRow()")
-            img(src="../../assets/images/delete.svg")
-          .send-bar
-              .input-large-string
-                input(value = "1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC")
-          .amount
-              .amount-input
-                input(value="1.0000")
-        .address-empty
-          .add-button(v-on:click="addRow" v-if="notAllStrings")
-            img(src="../../assets/images/add-button.svg")
-          .send-bar(v-if="notAllStrings")
-              .input-large-string
-                input
-          .amount(v-if="notAllStrings")
-              .amount-input
-                input
-          .green-container
+      .body-container
+        .options-content(v-bind:class="{ hidden : submitted }")
+          .code
+            .title Your personal code
+            .input-large-string
+              input(value="12345678901234567890123456789012")
+          .address
+            .send-bar
+              .title Send to address
+                .input-large-string
+                  input(value="1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC")
+            .amount
+              .title Amount
+                .amount-input
+                  input(value="1.0000")
+          .new-address(v-for="row in sendRows", v-if="showFlag")
+            .check-box(v-on:click="deleteRow()")
+              img(src="../../assets/images/delete.svg")
+            .send-bar
+                .input-large-string
+                  input(value = "1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC")
+            .amount
+                .amount-input
+                  input(value="1.0000")
+          .address-empty
+            .add-button(v-on:click="addRow" v-if="notAllStrings")
+              img(src="../../assets/images/add-button.svg")
+            .send-bar(v-if="notAllStrings")
+                .input-large-string
+                  input
+            .amount(v-if="notAllStrings")
+                .amount-input
+                  input
+          .lower-bar
+            .scrollbars
+              .quantity
+                .values
+                  .title Quantity transactions for payout
+                .scroll-new
+                  quantityRover
+              .delay(v-bind:class= "{'unactive': !active}")
+                .delay-options
+                  .check-box(v-on:click="setActive")
+                    img(src="../../assets/images/checked.svg" v-if="active")
+                  .values
+                    .title Delay
+                .scroll-new
+                  soloRangeRover
+              .randomize(v-bind:class= "{'unactive': !randomizeActive}")
+                .randomize-options
+                  .check-box(v-on:click="setRandomizeActive")
+                    img(src="../../assets/images/checked.svg" v-if="randomizeActive")
+                  .title Randomize periodicity between
+                .scroll-new
+                    rangeRover
+              .code-captcha(v-bind:class="{clicked : submitted}")
+                .user-values
+                  .title Code
+                    .input-code
+                      input(value="W6 8HP")
+                .captcha-body
+                  img(src="../../assets/images/captcha@3x.png")
+              .submit-button(v-on:click="submitHandler"
+              v-bind:class="{clicked : submitted}") Submit
+
+        .green-container
+          .submitted-body(v-if="submitted" )
             .container-title ORDER REQUIRED INPUT PAYMENTS
             .green-content
+              .input-address
+                .title Input address
+                .address-value 1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC
+              .receive-amount
+                .title Amount to receive (includes free)
+                .amount-value 1.02780000 BTC
               .hash
                 .title Hash
                 .value 2596a10f090541ecf4c22572226e637638dd171f80dc06b5c4b7f97205346fab2754a6583937dee8c3d479744e3f164a0edbc7416cc50d7e2797c3d6d8613964
+              .copy-btn
+                p Copy
               .order-created
                 .title Order created
                 .value
@@ -53,43 +95,20 @@
                 .value
                   .date 01.01.2018
                   .time 12:30:45
-              .input-address
-                .title Input address
-                .address-value 1BU2553MyhdQSpfLBFG8bfVnc12RtskuKC
-              .receive-amount
-                .title Amount to receive (includes free)
-                .amount-value 1.02780000 BTC
-        .lower-bar
-          .scrollbars
-            .quantity
-              .values
-                .title Quantity transactions for payout
-              .scroll-new
-                quantityRover
-            .delay(v-bind:class= "{'unactive': !active}")
-              .delay-options
-                .check-box(v-on:click="setActive")
-                  img(src="../../assets/images/checked.svg" v-if="active")
-                .values
-                  .title Delay
-                .question
-                  img(src="../../assets/images/question.svg")
-              .scroll-new(v-if="active")
-                soloRangeRover
-            .randomize(v-bind:class= "{'unactive': !randomizeActive}")
-              .randomize-options
-                .check-box(v-on:click="setRandomizeActive")
-                  img(src="../../assets/images/checked.svg" v-if="randomizeActive")
-                .title Randomize periodicity between
-              .scroll-new(v-if="randomizeActive")
-                  rangeRover
-            .code-captcha
-              .user-values
-                .title Code
-                  .input-code
-                    input(value="W6 8HP")
-              .captcha-body
-                img(src="../../assets/images/captcha@3x.png")
-            .submit-button Submit
-
-
+              .see-info-btn
+                p See info
+          .unsubmitted-body(v-else)
+            .container-title HOW TO USE IT?
+            .green-content
+              .green-content-row
+                <span>1.</span> If you have personal code, please reveal it to have <br> discount or other special features
+              .green-content-row-second
+                <span>2.</span> Put in address to wich you want to send crypto
+                p currency. You can chose up to 7 addresses and amounts for
+                p each of them
+              .green-content-row
+                <span>3.</span> You can chose the quantity of transactions for payout <br> to have optimal shuffle for you
+              .green-content-row
+                <span>4.</span> Delay feature is optional. Set the time and transaction will be done by that time
+              .green-content-row
+                <span>5.</span> Randomize feature is optional. You can chose first and second value and that would random periodicity

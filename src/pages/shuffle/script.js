@@ -22,13 +22,14 @@ export default {
       time: 36200,
       active: true,
       notAllStrings: true,
-      randomizeActive: true
+      randomizeActive: true,
+      submitted: false
     }
   },
   methods: {
     addRow() {
       this.showFlag = true;
-      if(this.sendRows.length < 2) {
+      if(this.sendRows.length < 1) {
         this.sendRows.push(1);
       } else {
         this.notAllStrings = false;
@@ -47,6 +48,10 @@ export default {
     },
     setRandomizeActive() {
       this.randomizeActive = !this.randomizeActive;
+
+    },
+    submitHandler() {
+      this.submitted = true;
 
     }
 

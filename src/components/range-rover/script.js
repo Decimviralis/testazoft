@@ -212,6 +212,7 @@ export default {
       this.context.beginPath();
       this.context.fillStyle = "#9153c7";
       this.context.font = "bold 18px GothamPro";
+      this.context.width = 40;
       this.context.fillText(this.high, this.centerX2-11.5, this.centerY2+5);
       this.context.fill();
     },
