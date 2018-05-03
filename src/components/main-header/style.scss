@@ -2,20 +2,21 @@
 
 .main-header {
   width: 100%;
-  background-color: #23005c;
+  background-color: #35aac8;
   color: #ffffff;
   margin-bottom: 40px;
   border: none;
 }
 .menu {
-  max-width: 708px;
+ // max-width: 708px;
   width: 70%;
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   &__item {
-
+    font-size: 18px;
+    font-weight: bold;
     padding: 36px 20px;
     align-items: center;
     cursor: pointer;
@@ -27,7 +28,7 @@
     font-weight: bold;
     height: 100%;
     border: none;
-    background: #8a4fc6;
+    background: #35aac8;
     box-sizing: border-box;
   }
 }
@@ -36,7 +37,7 @@
 
     .menu__item:nth-child(3) {
       font-weight: bold;
-      background: #8a4fc6;
+      background: #35aac8;
       box-sizing: border-box;
     }
 
@@ -45,7 +46,7 @@
 .new-address {
   .menu__item:nth-child(1) {
     font-weight: bold;
-    background: #8a4fc6;
+    background: #35aac8;
     box-sizing: border-box;
   }
 }
