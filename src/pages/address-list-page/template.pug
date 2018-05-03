@@ -1,0 +1,11 @@
+.address-list
+  .content
+    .body
+      .upper-titles.row
+        .upper-item Адрес
+        .upper-item Заметка
+        .upper-item ID
+      .values(v-for="address in addresses")
+        .address-value {{address.address_value}}
+        .tip-value {{address.address_tip}}
+        .id-value {{address.address_id}}

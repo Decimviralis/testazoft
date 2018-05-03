@@ -1,0 +1,41 @@
+$url: '../../assets/images/';
+@import '../../styles/colors.scss';
+
+
+* {
+  font-family: GothamPro;
+}
+
+.address-list {
+
+  .content {
+    color: $white;
+    .body {
+      max-width: 1200px;
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column nowrap;
+
+      .row {
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0 auto;
+        .upper-item:nth-child(1) {
+          margin-left: 0
+        }
+        .upper-item:nth-child(3) {
+          margin-right: 0;
+        }
+        .upper-item {
+          margin-left: 23%;
+          margin-right: 23%;
+        }
+      }
+    }
+  }
+}
