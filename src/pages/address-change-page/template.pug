@@ -1,4 +1,11 @@
 .address-change
-  .content
     .body
+      .address-name.input
+        input(placeholder="Название адреса" v-model='addressName')
+      .coords
+        .let.coord LET {{markerLatitude}}
+        .lat.coord LAT {{markerLongitude}}
+      .error-message {{errorMessage}}
+      .map(ref="map")
+      .save.button(v-on:click="saveAddress") Сохранить
 

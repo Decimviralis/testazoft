@@ -13,7 +13,7 @@
   margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   &__item {
     font-size: 18px;
     font-weight: bold;
@@ -23,30 +23,4 @@
   }
 }
 
-.address-change {
-  .menu__item:nth-child(2) {
-    font-weight: bold;
-    height: 100%;
-    border: none;
-    background: #35aac8;
-    box-sizing: border-box;
-  }
-}
 
-.address-list {
-
-    .menu__item:nth-child(3) {
-      font-weight: bold;
-      background: #35aac8;
-      box-sizing: border-box;
-    }
-
-}
-
-.new-address {
-  .menu__item:nth-child(1) {
-    font-weight: bold;
-    background: #35aac8;
-    box-sizing: border-box;
-  }
-}

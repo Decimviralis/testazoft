@@ -20,7 +20,7 @@ export default new Router({
 
     },
     {
-      path: '/address-change',
+      path: '/address-change/:id',
       name: 'address-change',
       component: changeAddress
     },

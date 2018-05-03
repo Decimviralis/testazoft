@@ -1,11 +1,19 @@
 .address-list
   .content
     .body
-      .upper-titles.row
+      .find.input
+        input(placeholder="Найти адрес" v-on:change="searchAddress()")
+      .loading-animation(v-if="!isLoaded")
+        #fountainG
+          .fountainG#fountainG_1
+          .fountainG#fountainG_2
+          .fountainG#fountainG_3
+          .fountainG#fountainG_4
+          .fountainG#fountainG_5
+          .fountainG#fountainG_6
+          .fountainG#fountainG_7
+          .fountainG#fountainG_8
+      .upper-titles.row(v-else)
         .upper-item Адрес
-        .upper-item Заметка
-        .upper-item ID
-      .values(v-for="address in addresses")
-        .address-value {{address.address_value}}
-        .tip-value {{address.address_tip}}
-        .id-value {{address.address_id}}
+      .values(v-for="(address, index) in addresses")
+        .address-value(v-on:click="goToAddress(index)") {{address.address_value}}

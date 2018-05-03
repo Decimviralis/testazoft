@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'vue-googlemaps/dist/vue-googlemaps.css'
+import * as VueGoogleMaps from "vue2-google-maps";
 
 // Vue.use(VueGoogleMaps, {
 //   load: {
-//     key: "AIzaSyAwiHkNvJxvyN1-D7borUuh840yjHIOP3c",
+//     key: "AIzaSyA6NowcQ6nIdfpcHFZtWiDmUc8HHurQpzI",
 //     libraries: ['places']
 //   }
 // });

@@ -1,17 +1,11 @@
 .new-address
-  .content
-    .body
-      //gmap-autocomplete(v-bind:place_changed="setPlace")
-      //.latitude.marker {{currentLat}}
-      //.longitude.marker {{currentLng}}
-      //
-      //.current-address {{currentAddress}}
-
-      //
-      //gmap-autocomplete(@place_changed="setPlace")
-      //button(@click="addMarker")
-      //
-      //.map#map
-
-    googleMap
+  .body
+    .address-name.input
+      input(placeholder="Название адреса" v-model='addressName')
+    .coords
+      .let.coord LET {{markerLatitude}}
+      .lat.coord LAT {{markerLongitude}}
+    .error-message {{errorMessage}}
+    .map(ref="map")
+    .save.button(v-on:click="saveAddress") Сохранить
 
