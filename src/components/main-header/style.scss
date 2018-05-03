@@ -1,74 +1,51 @@
+@import '../../styles/colors.scss';
+
 .main-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   width: 100%;
+  background-color: #23005c;
   color: #ffffff;
+  margin-bottom: 40px;
+  border: none;
 }
 .menu {
   max-width: 708px;
   width: 70%;
+  margin: 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   &__item {
+
     padding: 36px 20px;
     align-items: center;
     cursor: pointer;
   }
 }
-.lang-menu {
-  &__item {
-    padding: 36px 0 36px 20px;
-    font-weight: bold;
-    margin-right: 17.4%;
-    cursor: pointer;
-  }
-}
-.active {
-  font-weight: bold;
-  background: rgba(255,255,255, 0.4);
-  box-sizing: border-box;
-}
 
-.shuffle-page {
+.address-change {
   .menu__item:nth-child(2) {
     font-weight: bold;
-    background: rgba(255,255,255, 0.4);
+    height: 100%;
+    border: none;
+    background: #8a4fc6;
     box-sizing: border-box;
   }
 }
 
-.invest-page {
+.address-list {
 
     .menu__item:nth-child(3) {
       font-weight: bold;
-      background: rgba(255,255,255, 0.4);
+      background: #8a4fc6;
       box-sizing: border-box;
     }
 
 }
 
-.info-page {
-  .menu__item:nth-child(4) {
-    font-weight: bold;
-    background: rgba(255,255,255, 0.4);
-    box-sizing: border-box;
-  }
-}
-
-.faq-page {
-  .menu__item:nth-child(5) {
-    font-weight: bold;
-    background: rgba(255,255,255, 0.4);
-    box-sizing: border-box;
-  }
-}
-
-.main-page {
+.new-address {
   .menu__item:nth-child(1) {
     font-weight: bold;
-    background: rgba(255,255,255, 0.4);
+    background: #8a4fc6;
     box-sizing: border-box;
   }
 }

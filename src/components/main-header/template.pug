@@ -1,10 +1,5 @@
 .main-header
   .menu
-    .menu__item( v-on:click="switchBlock('main')") Main
-    .menu__item( v-on:click="switchBlock('shuffle')") SHUFFLE
-    .menu__item( v-on:click="switchBlock('invest')") Investing
-    .menu__item( v-on:click="switchBlock('howWork')") How does it work?
-    .menu__item( v-on:click="switchBlock('faq')") FAQ
-    .menu__item(v-bind:class="{active: feesChecked}" ) Fees
-  .lang-menu
-    .lang-menu__item EN
+    .menu__item( v-on:click="switchBlock('new')") Добавление
+    .menu__item( v-on:click="switchBlock('change')") Редактирование
+    .menu__item( v-on:click="switchBlock('list')") Список адресов

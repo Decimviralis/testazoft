@@ -5,78 +5,36 @@ export default {
 
   data: function () {
     return {
-      mainChecked: false,
-      shuffleChecked: false,
-      investingChecked: false,
-      howWorkChecked: false,
-      faqChecked: false,
-      feesChecked: false,
+      newAddressChecked: false,
+      changeAddressChecked: false,
+      addressListChecked: false,
       name: ''
     }
   },
 
   methods: {
     switchBlock(blockName) {
-      this.mainChecked = false;
-      this.shuffleChecked = false;
-      this.investingChecked = false;
-      this.howWorkChecked = false;
-      this.faqChecked = false;
-      this.feesChecked =  false;
+      this.newAddressChecked = false;
+      this.changeAddressChecked = false;
+      this.addressListChecked = false;
       switch(blockName) {
-        case 'main':
-          this.mainChecked = true;
-          this.shuffleChecked = false;
-          this.investingChecked = false;
-          this.howWorkChecked = false;
-          this.faqChecked = false;
-          this.feesChecked =  false;
-          this.$router.push({name: 'main'});
+        case 'new':
+          this.newAddressChecked = true;
+          this.changeAddressChecked = false;
+          this.addressListChecked = false;
+          this.$router.push({name: 'new-address'});
           break;
-        case 'shuffle':
-          this.mainChecked = false;
-          this.shuffleChecked = true;
-          this.investingChecked = false;
-          this.howWorkChecked = false;
-          this.faqChecked = false;
-          this.feesChecked =  false;
-          this.$router.push({name: 'shuffle'});
+        case 'change':
+          this.newAddressChecked = false;
+          this.changeAddressChecked = true;
+          this.addressListChecked = false;
+          this.$router.push({name: 'address-change'});
           break;
-        case 'invest':
-          this.mainChecked = false;
-          this.shuffleChecked = false;
-          this.investingChecked = true;
-          this.howWorkChecked = false;
-          this.faqChecked = false;
-          this.feesChecked =  false;
-          this.$router.push({name: 'invest-page'});
-          break;
-        case 'howWork':
-          this.mainChecked = false;
-          this.shuffleChecked = false;
-          this.investingChecked = false;
-          this.howWorkChecked = true;
-          this.faqChecked = false;
-          this.feesChecked =  false;
-          this.$router.push({name: 'info'});
-          break;
-        case 'faq':
-          this.mainChecked = false;
-          this.shuffleChecked = false;
-          this.investingChecked = false;
-          this.howWorkChecked = false;
-          this.faqChecked = true;
-          this.feesChecked =  false;
-          this.$router.push({name: 'faq-page'});
-          break;
-        case 'fees':
-          this.mainChecked = false;
-          this.shuffleChecked = false;
-          this.investingChecked = false;
-          this.howWorkChecked = false;
-          this.faqChecked = false;
-          this.feesChecked =  true;
-
+        case 'list':
+          this.newAddressChecked = false;
+          this.changeAddressChecked = false;
+          this.addressListChecked = true;
+          this.$router.push({name: 'address-list'});
           break;
       }
     }
