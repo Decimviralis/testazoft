@@ -22,17 +22,22 @@ export default {
   },
   mounted() {
     this.showMap();
+
   },
 
   methods: {
     placeMarker(coords) {
       let self = this;
+      if (self.marker) {
+        self.marker.setMap(null);
+      }
       self.marker = new google.maps.Marker({
         position: coords,
         map: this.googleMap
       });
       self.markerLatitude= self.marker.getPosition().lat();
       self.markerLongitude = self.marker.getPosition().lng();
+
     },
 
     showMap() {
@@ -42,7 +47,7 @@ export default {
         self.googleMap = new google.maps.Map(mapElement, self.mapOptions)
       }
       google.maps.event.addListener(self.googleMap, 'click', function(e) {
-        self.placeMarker(e.latLng);
+          self.placeMarker(e.latLng);
       });
     },
 
@@ -50,7 +55,11 @@ export default {
       this.errorMessage = '';
       if(this.markerLongitude!=null && this.markerLatitude!=null && this.addressName.length!=0 && this.marker!=null) {
         db.collection('addresses').add({
-          address_value: this.addressName
+          address_value: this.addressName,
+          address_longitude: this.markerLongitude,
+          address_latitude: this.markerLatitude,
+          //Замена поля ID для firebase
+          address_id: Math.floor(Date.now()/1000)
         })
           .then(
             docRef => {

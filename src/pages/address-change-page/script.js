@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import db from '../../components/firebase/firebaseinit'
+
 export default {
   name: 'address-change',
   components: {
   },
   data : function () {
     return {
-      addressName: this.$route.params.name,
+      addressName: '',
       markerLatitude: 0,
       markerLongitude: 0,
       map: null,
@@ -20,13 +21,22 @@ export default {
       errorMessage: ''
     }
   },
+
   mounted() {
+    this.getAddressData();
     this.showMap();
+    this.getPreviousMarker();
+  },
+  created() {
+
   },
 
   methods: {
     placeMarker(coords) {
       let self = this;
+      if (self.marker) {
+        self.marker.setMap(null);
+      }
       self.marker = new google.maps.Marker({
         position: coords,
         map: this.googleMap
@@ -45,5 +55,43 @@ export default {
         self.placeMarker(e.latLng);
       });
     },
+
+    getAddressData() {
+      db.collection('addresses').where('address_id', '==',
+        this.$route.params.id).get()
+        .then(querySnapshot => {
+          querySnapshot.forEach(doc => {
+            console.log(doc.data());
+            this.addressName = doc.data().address_value;
+            this.markerLatitude = doc.data().address_latitude;
+            this.markerLongitude = doc.data().address_longitude;
+          })
+        })
+    },
+
+    updateAddress() {
+      db.collection('addresses').where('address_id', '==',
+        this.$route.params.id).get()
+        .then(querySnapshot => {
+          querySnapshot.forEach(doc => {
+            doc.ref.update({
+              address_value: this.addressName,
+              address_latitude: this.markerLatitude,
+              address_longitude: this.markerLongitude
+            })
+              .then(() => {
+                this.$router.push({name: 'address-list'})
+              })
+          })
+        })
+    },
+
+    getPreviousMarker() {
+      let self = this;
+      self.marker = new google.maps.Marker({
+        position: {lat: self.markerLatitude, lng: self.markerLongitude},
+        map: this.googleMap
+      });
+    }
   }
 }

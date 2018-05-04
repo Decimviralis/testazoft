@@ -11,10 +11,11 @@ export default {
       addresses: [],
       addressIndex: 0,
       addressName: '',
-      isLoaded: false
+      isLoaded: false,
+      addressLongitude: 0,
+      addressLatitude: 0
     }
   },
-
   methods: {
     getAllAddresses() {
       db.collection('addresses').get()
@@ -31,7 +32,9 @@ export default {
       let self = this;
       self.addressIndex = index;
       self.addressName = self.addresses[index].address_value;
-      this.$router.push({name: 'address-change', params:{id: self.addressIndex, name: self.addressName}});
+      self.addressLatitude = self.addresses[index].address_latitude;
+      self.addressLongitude = self.addresses[index].address_longitude;
+      this.$router.push({name: 'address-change', params:{id: self.addresses[index].address_id}});
     },
 
     searchAddress() {

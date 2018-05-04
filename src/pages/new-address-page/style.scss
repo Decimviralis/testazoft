@@ -5,39 +5,78 @@ $url: '../../assets/images/';
   font-family: GothamPro;
 }
 
-.map {
-  margin-top: 48px;
-  height: 300px;
-  width: 70%;
-}
 
 .new-address {
 
     .body {
       width: 70%;
-      margin: 0 auto;
       display: flex;
       flex-flow: column nowrap;
       color: black;
-
-
+      justify-content: flex-start;
+      margin: 0 auto;
+      margin-left: 25%;
       .input {
         box-sizing: border-box;
-        max-width: 100%;
+        max-width: 70%;
         height: 40px;
         border: 0.5px solid $blue;
         border-radius: 33px;
         background: $white;
-        margin-bottom: 20px;
+        margin-bottom: 48px;
 
         input {
+          width: 100%;
           font-size: 18px;
           padding-top: 8px;
-          padding-left: 25px;
+          padding-left: 10px;
           border: none;
           outline: none;
           background: transparent;
         }
+      }
+
+      .coords {
+        display: flex;
+        flex-flow: column nowrap;
+        max-width: 100%;
+        .coord {
+          width: 30%;
+        }
+        .lat {
+          margin-top: 10px;
+        }
+      }
+
+      .error-message {
+        margin-top: 20px;
+        height: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $red;
+      }
+
+      .map {
+        margin-top: 28px;
+        height: 300px;
+        width: 90%;
+      }
+
+      .button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 140px;
+        border-radius: 5px;
+        background-color: $blue;
+        color: $white;
+        box-sizing: border-box;
+        height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 7px;
+        padding-left: 14px;
+        cursor: pointer;
+        user-select: none;
       }
     }
 }
